@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You — Radhika Barot</title>
+    <meta name="description" content="Thank you for your message. Radhika Barot will review your project details and get back to you shortly." />
+    
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo/favicon.png" />
+    
+    <!-- Early Theme Initialization to prevent flash of wrong theme -->
+    <script>
+      (function() {
+        try {
+          var savedTheme = localStorage.getItem('radhika-theme');
+          if (savedTheme === 'light' || (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1048726811492659');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+  </head>
+  <body>
+    <!-- Meta Pixel NoScript Fallback -->
+    <noscript>
+      <img height="1" width="1" style="display:none" alt=""
+      src="https://www.facebook.com/tr?id=1048726811492659&ev=PageView&noscript=1" />
+    </noscript>
+
+    <!-- Background Ambient Glow & Noise -->
+    <div class="bg-ambient-noise" aria-hidden="true"></div>
+    <div class="bg-radial-glow" aria-hidden="true"></div>
+
+    <!-- Navigation Header -->
+    <header id="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="nav-logo" aria-label="Radhika Barot Home">
+          <div class="nav-logo-icon">R<span>B</span></div>
+          <div class="nav-logo-text">RADHIKA<span>.</span></div>
+        </a>
+
+        <div class="nav-actions">
+          <button type="button" class="theme-toggle-btn" id="theme-toggle-thankyou" aria-label="Toggle theme" title="Toggle theme">
+            <!-- Sun icon (shown in dark theme) -->
+            <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <!-- Moon icon (shown in light theme) -->
+            <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </button>
+          <a href="index.html" class="btn btn-secondary">
+            <span>← RETURN HOME</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="thankyou-wrapper">
+      <div class="container">
+        <div class="thankyou-card">
+          <div class="thankyou-badge">
+            <span class="live-dot"></span>
+            <span>MESSAGE CONFIRMATION</span>
+          </div>
+
+          <h1 class="thankyou-title">
+            INQUIRY<br />
+            <span class="text-red">RECEIVED.</span>
+          </h1>
+
+          <p class="thankyou-desc">
+            Thank you for reaching out. Your project inquiry has been recorded. I typically review details and respond within 24–48 hours to discuss next steps.
+          </p>
+
+          <div class="thankyou-info-box">
+            <div class="thankyou-info-item">
+              <span class="thankyou-info-label">Direct Contact:</span>
+              <a href="mailto:barotradhika8@gmail.com" class="thankyou-info-value">barotradhika8@gmail.com</a>
+            </div>
+            <div class="thankyou-info-item">
+              <span class="thankyou-info-label">Disciplines:</span>
+              <span class="thankyou-info-value">Coding • Digital Marketing • Video Editing</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="index.html" class="btn btn-primary">
+              <span>EXPLORE SELECTED WORK</span>
+              <span class="arrow">↗</span>
+            </a>
+            <a href="mailto:barotradhika8@gmail.com" class="btn btn-secondary">
+              <span>SEND AN EMAIL</span>
+              <span class="arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-bottom" style="border-top: none;">
+          <div>© 2026 Radhika Barot. All rights reserved.</div>
+          <div style="color: var(--muted); font-size: 0.85rem;">
+            Code • Digital Marketing • Video Editing
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Notification Toast Container -->
+    <div id="toast-container" class="toast-container" aria-live="polite" role="region" aria-label="Notifications"></div>
+
+    <!-- Main JavaScript -->
+    <script src="js/script.js"></script>
+
+    <!-- Meta Pixel Lead Event Safe Trigger & Confirmation Enhancements -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Personalize greeting if lead submitted name
+        const leadName = sessionStorage.getItem('radhikaLeadName');
+        if (leadName) {
+          const descEl = document.querySelector('.thankyou-desc');
+          if (descEl) {
+            descEl.innerHTML = `Thank you, <strong>${leadName}</strong>! Your project inquiry has been recorded. I typically review details and respond within 24–48 hours to discuss next steps.`;
+          }
+        }
+
+        // Safe check for valid form submission session flag
+        const isLeadPending = sessionStorage.getItem('radhikaLeadPending');
+        if (isLeadPending === 'true') {
+          // Fire Meta Pixel Lead event
+          if (typeof fbq === 'function') {
+            fbq('track', 'Lead');
+            console.log('[Meta Pixel] Lead event tracked successfully.');
+          }
+          // Remove flag to prevent duplicate event firing on page reloads
+          sessionStorage.removeItem('radhikaLeadPending');
+
+          // Trigger confirmation toast on thank-you page
+          showThankYouToast(leadName);
+        }
+
+        function showThankYouToast(name) {
+          const container = document.getElementById('toast-container');
+          if (!container) return;
+          const toast = document.createElement('div');
+          toast.className = 'toast-card toast-success';
+          toast.setAttribute('role', 'status');
+          toast.innerHTML = `
+            <div class="toast-icon-wrapper">
+              <svg class="toast-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5"></path>
+              </svg>
+            </div>
+            <div class="toast-content">
+              <div class="toast-header">
+                <h4 class="toast-title">INQUIRY CONFIRMED</h4>
+                <button type="button" class="toast-close-btn" aria-label="Dismiss notification">✕</button>
+              </div>
+              <p class="toast-message">${name ? `Thank you, ${name}! Your inquiry has been logged successfully.` : 'Your inquiry has been logged successfully.'}</p>
+              <div class="toast-actions">
+                <span class="toast-meta">Direct Email: barotradhika8@gmail.com</span>
+              </div>
+            </div>
+            <div class="toast-progress-bar">
+              <div class="toast-progress-fill" style="animation-duration: 6000ms;"></div>
+            </div>
+          `;
+          container.appendChild(toast);
+
+          const closeBtn = toast.querySelector('.toast-close-btn');
+          const dismiss = () => {
+            if (toast.classList.contains('toast-hiding')) return;
+            toast.classList.add('toast-hiding');
+            setTimeout(() => toast.remove(), 350);
+          };
+          if (closeBtn) closeBtn.addEventListener('click', dismiss);
+          setTimeout(dismiss, 6000);
+        }
+      });
+    </script>
+  </body>
+</html>

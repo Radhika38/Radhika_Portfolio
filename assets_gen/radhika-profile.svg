@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="50%" stop-color="#090909"/>
+      <stop offset="100%" stop-color="#180a0a"/>
+    </linearGradient>
+    <radialGradient id="redGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FF2B2B" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#FF2B2B" stop-opacity="0.0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <rect width="800" height="1000" fill="url(#bgGrad)"/>
+  <rect width="800" height="1000" fill="url(#grid)"/>
+  <circle cx="400" cy="420" r="320" fill="url(#redGlow)"/>
+
+  <!-- Border & Crosshairs -->
+  <rect x="25" y="25" width="750" height="950" rx="20" fill="none" stroke="rgba(255,43,43,0.3)" stroke-width="1.5"/>
+  <circle cx="25" cy="25" r="4" fill="#FF2B2B"/>
+  <circle cx="775" cy="25" r="4" fill="#FF2B2B"/>
+  <circle cx="25" cy="975" r="4" fill="#FF2B2B"/>
+  <circle cx="775" cy="975" r="4" fill="#FF2B2B"/>
+
+  <!-- Avatar Silhouette Graphic -->
+  <g transform="translate(400, 420)">
+    <!-- Aura Ring -->
+    <circle cx="0" cy="0" r="180" fill="none" stroke="rgba(255,43,43,0.25)" stroke-width="2" stroke-dasharray="8 6"/>
+    <!-- Head -->
+    <circle cx="0" cy="-60" r="85" fill="#1C1C1C" stroke="#FF2B2B" stroke-width="2"/>
+    <!-- Sleek Face Contour -->
+    <path d="M -50 -50 Q 0 -10 50 -50" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+    <!-- Torso -->
+    <path d="M -130 150 C -120 40 -80 15 -30 15 L 30 15 C 80 15 120 40 130 150 Z" fill="#181818" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  </g>
+
+  <!-- Tag Pill -->
+  <rect x="280" y="670" width="240" height="38" rx="19" fill="#151515" stroke="rgba(255,43,43,0.5)" stroke-width="1.5"/>
+  <text x="400" y="694" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#FF2B2B" text-anchor="middle" letter-spacing="2">RADHIKA BAROT</text>
+
+  <!-- Meta details -->
+  <text x="400" y="745" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="800" fill="#F5F5F5" text-anchor="middle" letter-spacing="1">RADHIKA BAROT</text>
+  <text x="400" y="780" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#A3A3A3" text-anchor="middle" letter-spacing="3">CODER • DIGITAL MARKETER • VIDEO EDITOR</text>
+  
+  <rect x="200" y="830" width="400" height="60" rx="12" fill="rgba(255,43,43,0.08)" stroke="rgba(255,43,43,0.3)" stroke-width="1"/>
+  <text x="400" y="855" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#F5F5F5" text-anchor="middle">REPLACE WITH YOUR PHOTO IN</text>
+  <text x="400" y="875" font-family="'Space Grotesk', monospace" font-size="13" font-weight="700" fill="#FF2B2B" text-anchor="middle">assets/images/radhika-profile.jpg</text>
+</svg>

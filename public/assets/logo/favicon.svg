@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="favRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4D5E"/>
+      <stop offset="100%" stop-color="#FF1A2D"/>
+    </linearGradient>
+    <radialGradient id="favGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF3344" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FF3344" stop-opacity="0.0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Favicon Background -->
+  <rect width="128" height="128" rx="28" fill="#0B0B0D"/>
+  <rect x="2" y="2" width="124" height="124" rx="26" fill="none" stroke="#FF3344" stroke-width="2.5" stroke-opacity="0.8"/>
+  <circle cx="64" cy="64" r="54" fill="url(#favGlow)"/>
+
+  <!-- Bold Central Monogram "RB" -->
+  <g transform="translate(18, 16)">
+    <path d="M 16 16 L 46 16 C 58 16 66 21 66 30 C 66 36.5 61 41 55 43 C 63 45 69 50.5 69 59 C 69 69 60 74 48 74 L 16 74 Z M 29 27 L 29 39 L 45 39 C 51 39 54 37 54 33 C 54 29 51 27 45 27 Z M 29 49 L 29 63 L 47 63 C 54 63 57 60.5 57 56 C 57 51.5 54 49 47 49 Z" fill="#F5F5F7"/>
+    <!-- Red glowing dot -->
+    <circle cx="79" cy="74" r="8" fill="url(#favRed)"/>
+  </g>
+</svg>

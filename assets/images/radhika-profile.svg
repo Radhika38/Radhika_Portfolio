@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1333" width="1000" height="1333">
+  <defs>
+    <linearGradient id="darkCanvas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141418"/>
+      <stop offset="45%" stop-color="#0B0B0D"/>
+      <stop offset="100%" stop-color="#190D0F"/>
+    </linearGradient>
+
+    <radialGradient id="redAura" cx="50%" cy="38%" r="48%">
+      <stop offset="0%" stop-color="#FF3344" stop-opacity="0.32"/>
+      <stop offset="65%" stop-color="#FF3344" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FF3344" stop-opacity="0.0"/>
+    </radialGradient>
+
+    <linearGradient id="skinTone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2B78D"/>
+      <stop offset="50%" stop-color="#DF9C70"/>
+      <stop offset="100%" stop-color="#C27A52"/>
+    </linearGradient>
+
+    <linearGradient id="blazerGrey" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A4B50"/>
+      <stop offset="50%" stop-color="#34353A"/>
+      <stop offset="100%" stop-color="#242528"/>
+    </linearGradient>
+
+    <linearGradient id="hairDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A1818"/>
+      <stop offset="50%" stop-color="#121010"/>
+      <stop offset="100%" stop-color="#0A0909"/>
+    </linearGradient>
+
+    <pattern id="studioGrid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+    </pattern>
+
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1000" height="1333" fill="url(#darkCanvas)"/>
+  <rect width="1000" height="1333" fill="url(#studioGrid)"/>
+  <circle cx="500" cy="500" r="460" fill="url(#redAura)"/>
+
+  <!-- Editorial Corner Marks -->
+  <g stroke="rgba(255,51,68,0.4)" stroke-width="2" fill="none">
+    <path d="M 40 70 L 40 40 L 70 40"/>
+    <path d="M 960 70 L 960 40 L 930 40"/>
+    <path d="M 40 1263 L 40 1293 L 70 1293"/>
+    <path d="M 960 1263 L 960 1293 L 930 1293"/>
+  </g>
+
+  <!-- Subtle Target Crosshairs -->
+  <line x1="500" y1="40" x2="500" y2="70" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <line x1="40" y1="666" x2="70" y2="666" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <line x1="930" y1="666" x2="960" y2="666" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+
+  <!-- Character Artwork (Radhika Barot in Blazer & White Shirt) -->
+  <g id="radhika-figure" filter="url(#softShadow)">
+    
+    <!-- Torso / Grey Tailored Blazer -->
+    <!-- Back shoulders -->
+    <path d="M 230 780 C 230 680 320 620 500 620 C 680 620 770 680 770 780 L 840 1333 L 160 1333 Z" fill="url(#blazerGrey)"/>
+    
+    <!-- Crisp White Collared Dress Shirt V-neck -->
+    <path d="M 430 590 L 500 780 L 570 590 L 540 570 L 500 620 L 460 570 Z" fill="#F8F8FC"/>
+    <path d="M 460 570 L 500 720 L 430 790 L 410 700 Z" fill="#E8E8EE"/>
+    <path d="M 540 570 L 500 720 L 570 790 L 590 700 Z" fill="#FFFFFF"/>
+    
+    <!-- Conference Lanyard (White ribbon around neck) -->
+    <path d="M 465 590 Q 480 750 495 860" stroke="#FFFFFF" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <path d="M 535 590 Q 520 750 505 860" stroke="#FFFFFF" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <path d="M 465 590 Q 480 750 495 860" stroke="#FF3344" stroke-width="2.5" fill="none" stroke-dasharray="8 6"/>
+    <path d="M 535 590 Q 520 750 505 860" stroke="#FF3344" stroke-width="2.5" fill="none" stroke-dasharray="8 6"/>
+
+    <!-- Conference ID Badge Clip & Pass -->
+    <rect x="475" y="855" width="50" height="75" rx="6" fill="#1A1A22" stroke="#FF3344" stroke-width="1.5"/>
+    <rect x="483" y="865" width="34" height="20" rx="3" fill="#FFE066"/>
+    <rect x="483" y="890" width="34" height="12" rx="2" fill="#7C3AED"/>
+    <circle cx="500" cy="855" r="4" fill="#E5E7EB"/>
+
+    <!-- Left & Right Blazer Lapels -->
+    <path d="M 330 640 L 430 840 L 450 1150 L 330 1333 L 200 1333 L 260 760 Z" fill="#3D3E43" stroke="#252629" stroke-width="2"/>
+    <path d="M 670 640 L 570 840 L 550 1150 L 670 1333 L 800 1333 L 740 760 Z" fill="#2E2F33" stroke="#222326" stroke-width="2"/>
+    
+    <!-- Blazer Notch & Button Details -->
+    <path d="M 390 680 L 420 730 L 375 750 Z" fill="#252629"/>
+    <path d="M 610 680 L 580 730 L 625 750 Z" fill="#1C1D20"/>
+    <circle cx="496" cy="980" r="10" fill="#18181B" stroke="#3F3F46" stroke-width="2"/>
+
+    <!-- Neck & Collarbone -->
+    <path d="M 445 490 C 445 560 455 600 500 600 C 545 600 555 560 555 490 Z" fill="url(#skinTone)"/>
+    <path d="M 470 540 Q 500 565 530 540" stroke="rgba(194, 122, 82, 0.4)" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <!-- Long Cascading Dark Wavy Hair (Back Layer) -->
+    <path d="M 300 380 C 260 480 270 650 310 760 C 330 820 350 860 360 920 C 330 880 300 780 280 680 C 260 570 280 430 330 330 Z" fill="url(#hairDark)"/>
+    <path d="M 700 380 C 740 480 730 650 690 760 C 670 820 650 860 640 920 C 670 880 700 780 720 680 C 740 570 720 430 670 330 Z" fill="url(#hairDark)"/>
+
+    <!-- Head & Face Contour -->
+    <path d="M 390 340 C 390 230 610 230 610 340 C 610 440 580 520 500 520 C 420 520 390 440 390 340 Z" fill="url(#skinTone)"/>
+    
+    <!-- Warm Blush -->
+    <ellipse cx="430" cy="415" rx="30" ry="18" fill="#FF5566" opacity="0.18"/>
+    <ellipse cx="570" cy="415" rx="30" ry="18" fill="#FF5566" opacity="0.18"/>
+
+    <!-- Radiant Smile & Lips (from Radhika_barot.jpeg) -->
+    <path d="M 445 440 Q 500 485 555 440 Q 500 452 445 440 Z" fill="#D9534F"/>
+    <!-- Upper Lip -->
+    <path d="M 450 440 Q 480 436 500 441 Q 520 436 550 440 Q 500 448 450 440 Z" fill="#C0392B"/>
+    <!-- Visible White Teeth -->
+    <path d="M 456 443 Q 500 450 544 443 Q 500 468 456 443 Z" fill="#FFFFFF"/>
+    <!-- Teeth division line -->
+    <line x1="500" y1="445" x2="500" y2="455" stroke="rgba(0,0,0,0.15)" stroke-width="1"/>
+    <!-- Lower Lip Smile Curve -->
+    <path d="M 458 455 Q 500 482 542 455 Q 500 472 458 455 Z" fill="#E26D68"/>
+
+    <!-- Nose -->
+    <path d="M 500 365 L 493 410 Q 500 417 507 410 Z" fill="rgba(194, 122, 82, 0.35)"/>
+    <ellipse cx="488" cy="412" rx="4" ry="2" fill="rgba(150, 80, 40, 0.4)"/>
+    <ellipse cx="512" cy="412" rx="4" ry="2" fill="rgba(150, 80, 40, 0.4)"/>
+
+    <!-- Warm Smiling Eyes & Eyelids -->
+    <!-- Left Eye -->
+    <path d="M 425 365 Q 448 350 470 365 Q 448 375 425 365 Z" fill="#FFFFFF"/>
+    <circle cx="450" cy="364" r="10" fill="#2C1B18"/>
+    <circle cx="450" cy="364" r="5" fill="#0D0907"/>
+    <circle cx="453" cy="361" r="2.5" fill="#FFFFFF"/>
+    <path d="M 422 364 Q 448 348 472 364" stroke="#1C1817" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Right Eye -->
+    <path d="M 530 365 Q 552 350 575 365 Q 552 375 530 365 Z" fill="#FFFFFF"/>
+    <circle cx="550" cy="364" r="10" fill="#2C1B18"/>
+    <circle cx="550" cy="364" r="5" fill="#0D0907"/>
+    <circle cx="553" cy="361" r="2.5" fill="#FFFFFF"/>
+    <path d="M 528 364 Q 552 348 578 364" stroke="#1C1817" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <!-- Graceful Dark Eyebrows -->
+    <path d="M 418 342 Q 446 332 475 344" stroke="#1F1A18" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <path d="M 525 344 Q 554 332 582 342" stroke="#1F1A18" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Front Layer of Long Dark Glossy Wavy Hair Framing Face -->
+    <path d="M 390 280 C 440 240 560 240 610 280 C 640 330 650 420 635 480 C 625 430 600 370 580 340 C 530 300 470 300 420 340 C 400 370 375 430 365 480 C 350 420 360 330 390 280 Z" fill="#141212"/>
+    
+    <!-- Flowing Hair Over Shoulders -->
+    <path d="M 365 460 C 340 560 330 680 370 820 C 385 870 410 930 425 980 C 390 920 360 840 345 740 C 330 640 335 540 365 460 Z" fill="url(#hairDark)"/>
+    <path d="M 635 460 C 660 560 670 680 630 820 C 615 870 590 930 575 980 C 610 920 640 840 655 740 C 670 640 665 540 635 460 Z" fill="url(#hairDark)"/>
+
+    <!-- Delicate Hair Strands & Shine -->
+    <path d="M 425 285 Q 490 260 575 285" stroke="rgba(255,255,255,0.18)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 360 620 Q 375 750 410 880" stroke="rgba(255,255,255,0.12)" stroke-width="2" fill="none"/>
+    <path d="M 640 620 Q 625 750 590 880" stroke="rgba(255,255,255,0.12)" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Bottom Brand Watermark Strip -->
+  <rect x="0" y="1233" width="1000" height="100" fill="rgba(11, 11, 13, 0.85)"/>
+  <line x1="0" y1="1233" x2="1000" y2="1233" stroke="rgba(255,51,68,0.3)" stroke-width="1.5"/>
+  <text x="50" y="1288" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="900" fill="#F5F5F7">RADHIKA BAROT<tspan fill="#FF3344">.</tspan></text>
+  <text x="950" y="1288" text-anchor="end" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#8E8E9A" letter-spacing="2">CODER • MARKETER • CREATOR</text>
+</svg>
