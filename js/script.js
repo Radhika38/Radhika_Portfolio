@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCustomCursor();
   initNavigation();
   initHeroVideo();
+  initReelVideos();
   initProjectCardSkeletons();
   initProjectModal();
   initTestimonialsFilter();
@@ -241,6 +242,170 @@ function initHeroVideo() {
       }
     });
   }
+}
+
+/* ==================================================
+   CONTENT & MOTION REEL VIDEOS & MODAL
+   ================================================== */
+function initReelVideos() {
+  const reelCards = document.querySelectorAll('.reel-card');
+  if (!reelCards.length) return;
+
+  const modal = document.getElementById('reel-modal');
+  const modalVideo = document.getElementById('reel-modal-video');
+  const modalClose = document.getElementById('reel-modal-close-btn');
+  const modalTitle = document.getElementById('reel-modal-title');
+  const modalTag = document.getElementById('reel-modal-tag');
+  const modalDesc = document.getElementById('reel-modal-desc');
+
+  // Close Reel Modal
+  const closeReelModal = () => {
+    if (!modal) return;
+    modal.classList.remove('is-active');
+    document.body.classList.remove('modal-open');
+    if (modalVideo) {
+      modalVideo.pause();
+      modalVideo.removeAttribute('src');
+      modalVideo.load();
+    }
+  };
+
+  if (modalClose) {
+    modalClose.addEventListener('click', closeReelModal);
+  }
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeReelModal();
+    });
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.classList.contains('is-active')) {
+      closeReelModal();
+    }
+  });
+
+  reelCards.forEach((card) => {
+    const frame = card.querySelector('.reel-visual-frame');
+    const video = card.querySelector('.reel-video-element');
+    const playBtn = card.querySelector('.reel-play-btn');
+    const soundBtn = card.querySelector('.reel-sound-btn');
+    const progressFill = card.querySelector('.reel-progress-fill');
+    const textPlayTrigger = card.querySelector('.reel-btn-play-trigger');
+    const expandBtn = card.querySelector('.reel-btn-expand');
+
+    if (!video) return;
+
+    // Helper to update play/pause UI state
+    const updatePlayState = (isPlaying) => {
+      if (isPlaying) {
+        if (frame) frame.classList.add('is-playing');
+        if (playBtn) playBtn.innerHTML = '⏸';
+        if (textPlayTrigger) {
+          textPlayTrigger.innerHTML = '<span class="trigger-icon">⏸</span><span class="trigger-text">PAUSE REEL</span>';
+        }
+      } else {
+        if (frame) frame.classList.remove('is-playing');
+        if (playBtn) playBtn.innerHTML = '▶';
+        if (textPlayTrigger) {
+          textPlayTrigger.innerHTML = '<span class="trigger-icon">▶</span><span class="trigger-text">PLAY REEL</span>';
+        }
+      }
+    };
+
+    // Toggle Play/Pause
+    const togglePlay = () => {
+      if (video.paused) {
+        // Pause any other playing reels
+        document.querySelectorAll('.reel-video-element').forEach((v) => {
+          if (v !== video && !v.paused) {
+            v.pause();
+            const parentFrame = v.closest('.reel-visual-frame');
+            if (parentFrame) parentFrame.classList.remove('is-playing');
+          }
+        });
+        video.play().catch(() => {});
+        updatePlayState(true);
+      } else {
+        video.pause();
+        updatePlayState(false);
+      }
+    };
+
+    // Toggle Sound
+    if (soundBtn) {
+      soundBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        video.muted = !video.muted;
+        const soundIcon = soundBtn.querySelector('.sound-icon');
+        if (soundIcon) {
+          soundIcon.textContent = video.muted ? '🔇' : '🔊';
+        }
+        if (!video.muted && video.paused) {
+          video.play().catch(() => {});
+          updatePlayState(true);
+        }
+      });
+    }
+
+    // Frame or play button clicks toggle playback
+    if (frame) {
+      frame.addEventListener('click', (e) => {
+        if (e.target.closest('.reel-sound-btn')) return;
+        togglePlay();
+      });
+    }
+
+    if (textPlayTrigger) {
+      textPlayTrigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        togglePlay();
+      });
+    }
+
+    // Video progress bar
+    if (progressFill) {
+      video.addEventListener('timeupdate', () => {
+        if (video.duration) {
+          const pct = (video.currentTime / video.duration) * 100;
+          progressFill.style.width = `${pct}%`;
+        }
+      });
+    }
+
+    // Video events
+    video.addEventListener('play', () => updatePlayState(true));
+    video.addEventListener('pause', () => updatePlayState(false));
+    video.addEventListener('ended', () => {
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    });
+
+    // Expand into Theater Modal
+    if (expandBtn && modal && modalVideo) {
+      expandBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const src = expandBtn.getAttribute('data-reel-src');
+        const title = expandBtn.getAttribute('data-reel-title');
+        const tag = expandBtn.getAttribute('data-reel-tag');
+        const desc = expandBtn.getAttribute('data-reel-desc');
+
+        if (modalTitle) modalTitle.textContent = title || '';
+        if (modalTag) modalTag.textContent = tag || '';
+        if (modalDesc) modalDesc.textContent = desc || '';
+
+        // Pause current background video
+        video.pause();
+        updatePlayState(false);
+
+        modalVideo.src = src;
+        modalVideo.currentTime = video.currentTime || 0;
+        modalVideo.muted = false; // unmuted for full theater experience
+        modal.classList.add('is-active');
+        document.body.classList.add('modal-open');
+        modalVideo.play().catch(() => {});
+      });
+    }
+  });
 }
 
 /* ==================================================
